@@ -23,10 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header style={{ padding: "20px", background: "#eee"}}>
+          <h1 className="text-xl font-bold text-center">ゴルフ練習計画管理アプリ</h1>
+        </header>
         {children}
       </body>
     </html>
