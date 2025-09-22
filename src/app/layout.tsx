@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGolfBallTee } from "@fortawesome/free-solid-svg-icons";
-import { faGolfFlagHole } from "@fortawesome/free-solid-svg-icons";
 
 
 const geistSans = Geist({
