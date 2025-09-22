@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGolfBallTee } from "@fortawesome/free-solid-svg-icons";
+import { faGolfFlagHole } from "@fortawesome/free-solid-svg-icons";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header style={{ padding: "20px", background: "#eee"}}>
-          <h1 className="text-xl font-bold text-center">ゴルフ練習計画管理アプリ</h1>
+        <header className="p-6">
+          <h1 className="text-xl font-bold text-center">
+            <FontAwesomeIcon icon={faGolfBallTee} className="inline-block w-7 h-7 text-[#00597c]" />
+            ゴルフ練習計画管理アプリ
+            <FontAwesomeIcon icon={faGolfBallTee} className="inline-block w-7 h-7 text-[#00597c]" />          
+          </h1>
         </header>
         {children}
       </body>
