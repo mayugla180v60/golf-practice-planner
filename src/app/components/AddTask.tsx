@@ -126,23 +126,25 @@ const AddTask = () => {
         ) : (
           <ul className="space-y-2">
             {items.map((items) => (
-              <li key={items.id} className="flex items-center gap-3 border-b last:border-none pb-2">
-                <input
-                  type="checkbox"
-                  checked={items.done}
-                  onChange={() => handleCheck(items.id, items.done)}
-                  className="w-5 h-5"
-                />
-                <span className="">
+              <li key={items.id} className="flex justify-between gap-3 border-b last:border-none pb-2">
+                <div className="flex items-center">
                   <input
-                    className={items.done === true ? "line-through text-gray-400" : ""}
-                    placeholder="例：ドライバー 50球"
-                    type='text'
-                    value={items.inputValue}
-                    onChange={(e) => handleEdit(items.id, e.target.value)}
-                    disabled={items.done === true}
+                    type="checkbox"
+                    checked={items.done}
+                    onChange={() => handleCheck(items.id, items.done)}
+                    className="w-5 h-5 mr-3"
                   />
-                </span>
+                  <span className="">
+                    <input
+                      className={items.done === true ? "line-through text-gray-400 w-70" : "w-70"}
+                      placeholder="例：ドライバー 50球"
+                      type='text'
+                      value={items.inputValue}
+                      onChange={(e) => handleEdit(items.id, e.target.value)}
+                      disabled={items.done === true}
+                    />
+                  </span>
+                </div>
                 <button onClick={() =>  handleDelete(items.id)}><FontAwesomeIcon icon={faTrash} /></button>
               </li>
             ))}
