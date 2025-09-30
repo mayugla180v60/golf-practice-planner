@@ -1,7 +1,10 @@
 # Golf Practice Planner
+https://golf-practice-planner.fly.dev/
 
+<img width="830" height="410" alt="Image" src="https://github.com/user-attachments/assets/2cb1a446-3a3c-4800-9437-e39ce797c76f" />
 ゴルフ練習メニューを簡単に作成・管理できるWebアプリです。  
 毎日の練習内容を記録し、達成状況を可視化できます。
+
 
 ## 主な機能
 
